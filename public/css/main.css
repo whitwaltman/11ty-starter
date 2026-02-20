@@ -1,0 +1,12 @@
+body > header > h1 {
+    padding-block: 0 calc(var(--s0)/4);
+}
+
+body > header > h1 a {
+    color: var(--text-gray);
+    text-decoration: none;
+}
+
+body > footer > p {
+    padding: 0;
+}

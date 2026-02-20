@@ -47,13 +47,14 @@ body {
     min-height: 100vh;
     overflow-y: scroll;
     width: 100vw;
-    font-size: var(--s0);
+    font-size: var(--s1);
     display: flex;
     flex-direction: column;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, ol {
     margin: 0;
+    padding-block: 0 var(--s0);
 }
 
 /* || Headings */
@@ -65,7 +66,11 @@ h1 {
 h2 {
     font-size: var(--s3);
     font-weight: 600;
-    padding-block: 0 var(--s0);
+}
+
+h3 {
+    font-size: var(--s2);
+    font-weight: 400;
 }
 
 /* || Layout */
@@ -84,9 +89,23 @@ body > main {
 body > footer {
     flex: 0 0 auto;
     background: var(--bg-dark);
+    color: var(--text-light);
     padding: var(--s1) var(--s0);
 }
 
-ul, ol {
-    padding-block: 0 var(--s2);
+/* || Elements */
+li + li {
+    padding-top: calc(var(--s0)/2);
+}
+
+a {
+    color: blue;
+}
+
+a:hover:not(h1 > a), a:focus:not(h1 > a) {
+    background: var(--color-accent);
+}
+
+h1 > a:hover, h1 > a:focus {
+    color: var(--color-primary);
 }

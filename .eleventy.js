@@ -12,7 +12,7 @@ export default async function (config) {
 	});
 
 	// Add global default layout
-	config.addGlobalData("layout", "html.njk");
+	config.addGlobalData("layout", "base.njk");
 
 	// Register filter functions
 	Object.keys(filters).forEach((filter) => {

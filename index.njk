@@ -1,2 +1,11 @@
-<h1>11ty-starter</h1>
-Welcome to this starter template repository.
+<p>This template is fairly minimal but configures an Eleventy project for my personal preferences.</p>
+
+<ul>
+{% for page in collections.all %}
+{% if page.url !== "/" %}
+    <li>
+        <a href="{{ page.url }}">{{ page.data.title | default(page.fileSlug) }}</a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>

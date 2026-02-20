@@ -1,0 +1,13 @@
+---
+layout: html.njk
+---
+<header>
+    <h1><a href="/">11ty-starter</a></h1>
+    <h3>{{ site.description }}</h3>
+</header>
+<main>
+    {{ content | safe }}
+</main>
+<footer>
+    <p>Latest build: {{ site.latestBuild }}</p>
+</footer>
