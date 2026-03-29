@@ -23,12 +23,15 @@ export default async function (config) {
 	config.addTransform("externalLinks", transformExternalLinks);
 
 	return {
+		templateFormats: ["md", "njk", "html"],
 		markdownTemplateEngine: "njk",
+		htmlTemplateEngine: "njk",
 		dir: {
-			input: ".",
-			includes: "_includes",
-			data: "_data",
-			output: "_site",
+			input: "./src",
+			includes: "../_includes",
+			layouts: "../_layouts",
+			data: "../_data",
+			output: ".site",
 		}
 	};
 }

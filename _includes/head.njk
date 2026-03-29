@@ -1,0 +1,32 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% if title %}
+        {% set sep = " | "%}
+    {% endif %}
+    <title>{{ title }}{{ sep }}{{ site.title }}</title>
+
+    <meta name="description" content="{{ site.description }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    {% if isProduction %}
+        {% css %}
+            {% include "css/base.css" %}
+            {% include "css/main.css" %}
+        {% endcss %}
+
+        <style>{% getBundle "css" %}</style>
+    {% else %}
+        <link rel="stylesheet" href="/base.css">
+        <link rel="stylesheet" href="/main.css">
+    {% endif %}
+    
+    {# META TAGS #}
+    <meta property="og:title" content="{{ site.title }}">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta name="generator" content="{{ eleventy.generator }}">
+</head>
