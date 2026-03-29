@@ -15,12 +15,14 @@
         {% css %}
             {% include "css/base.css" %}
             {% include "css/main.css" %}
+            {% include "css/primitives.css" %}
         {% endcss %}
 
         <style>{% getBundle "css" %}</style>
     {% else %}
         <link rel="stylesheet" href="/base.css">
         <link rel="stylesheet" href="/main.css">
+        <link rel="stylesheet" href="/primitives.css">
     {% endif %}
     
     {# META TAGS #}
