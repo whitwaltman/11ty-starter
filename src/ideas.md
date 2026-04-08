@@ -1,5 +1,5 @@
 ---
-title: Ideas for how you could use this template
+title: Things you could do with this template
 ---
 
 Eleventy is a flexible and extensible static site generator. I mostly use it for stuff like personal websites or blogs, but you can do a lot of interesting things with it. Some ideas include:

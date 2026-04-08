@@ -10,3 +10,7 @@ body > header > h1 a {
 body > footer > p {
     padding: 0;
 }
+
+body > main {
+    padding-bottom: var(--s8);
+}
