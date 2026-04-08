@@ -7,8 +7,27 @@ body > header > h1 a {
     text-decoration: none;
 }
 
-body > footer > p {
-    padding: 0;
+body > footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+body > footer a {
+    color: var(--color-primary);
+}
+
+body > footer a:hover {
+    color: blue;
+}
+
+@media (max-width: 768px) {
+    body > footer span {
+        text-wrap: wrap;
+    }
+
+    body > footer {
+        flex-direction: column;
+    }
 }
 
 body > main {
