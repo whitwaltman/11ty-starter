@@ -1,11 +1,9 @@
 {
-    "$schema": "node_modules/wrangler/config-schema.json",
-    "name": "your-project-name",
-    "compatibility_date": "2024-04-01",
-    "assets": {
-        "directory": ".site"
-    },
-    "observability": {
-        "enabled": true
-    }
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "your-project-name",
+  "compatibility_date": "2024-04-01",
+  "pages_build_output_dir": "./.site", 
+  "observability": {
+    "enabled": true
+  }
 }
